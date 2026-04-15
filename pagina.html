@@ -3,12 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <title>Ignacio Antiñanco</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="/diseño.css/diseño.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
-        <h1>Huerto Feliz</h1>
+        <h1>Bienvenido a Huerto Feliz</h1>
     </header>
+    <main>
+
+        <section>
+            <section class="informacion">
+                <div class="datosEmpresa">
+                    <h2>Datos de la Empresa</h2>
+                    <p>Nombre: Huerto Feliz</p>
+                    <p>Dirección: Calle Verde 123, Ciudad Jardín</p>
+                    <p>Teléfono: (555) 123-4567</p>
+                    <p>Email: info@huertofeliz.com</p>
+
+                </div>
+                <div class="formulario">
+                    <h2>Formulario de Contacto</h2>
+                    <form action="/enviar" method="post">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required><br><br>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required><br><br>
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+                        <input type="submit" value="Enviar">
+                    </form>
+
+
+                </div>
+            </section>
+        </section>
+
+        
+        <!-- Sección de servicios -->
+        <section>
+            <h2>Servicios</h2>
+            <section class="services">
+                    <div class="card">
+                        <h3>Corte de pasto</h3>
+                        <img src="/imagenes/huerto.jpg" alt="Huerto">
+                        <p>Reseña: Servicio de corte de pasto profesional y eficiente.</p>
+                        <p>Precio: $50</p>
+                    </div>
+                    <div class="card">
+                        <h3>Poda de árboles</h3>
+                        <img src="/imagenes/huerto.jpg" alt="Huerto">
+                        <p>Reseña: Servicio de poda de árboles profesional y eficiente.</p>
+                        <p>Precio: $30</p>
+                    </div>
+                    <div class="card">
+                        <h3>Riego de plantas</h3>
+                        <img src="/imagenes/huerto.jpg" alt="Huerto">
+                        <p>Reseña: Servicio de riego de plantas profesional y eficiente.</p>
+                        <p>Precio: $100</p>
+                    </div>  
+                    <div class="card">
+                        <h3>Fertilización</h3>
+                        <img src="/imagenes/huerto.jpg" alt="Huerto">
+                        <p>Reseña: Servicio de fertilización profesional y eficiente.</p>
+                        <p>Precio: $80</p>
+                    </div>
+            </section>
+        </section>
+
+       <!-- Sección de historia y comentarios -->
+        <Section>
+            <!-- Sección de historia -->
+            <div class="historia">
+                <div class="visualJardin">
+                    <h1>Nuestra Historia</h1>
+                    <img src="/imagenes/huerto.jpg" alt="Huerto">
+
+                </div>
+                <div class="textHistoria">
+                   <h1>Nuestra Historia</h1>
+                   <p>En Huerto Feliz, nuestra historia comenzó con una pasión por la jardinería y 
+                    el deseo de crear espacios verdes que inspiren alegría y bienestar. Fundada por 
+                    un grupo de entusiastas de la naturaleza, nuestra empresa se ha dedicado a 
+                    transformar jardines y espacios al aire libre en oasis de belleza y tranquilidad.
+                     Con años de experiencia en el cuidado de plantas, diseño de jardines y servicios 
+                     de mantenimiento, hemos cultivado una reputación sólida basada en la calidad, la 
+                     creatividad y el compromiso con nuestros clientes. En Huerto Feliz, creemos que 
+                     cada jardín tiene el potencial de ser un refugio personal, y estamos aquí para 
+                     ayudar a nuestros clientes a hacer realidad esa visión.</p>
+
+                </div>
+            </div>
+            
+            <!-- Sección de comentarios -->
+            <div class="comentarios">
+                <div class="Clientes">
+                    <h4>Comentario 1</h4>
+                    <p>"Excelente servicio, mi jardín luce maravilloso."</p>
+                </div>
+                <div class="Clientes">
+                    <h4>Comentario 2</h4>
+                    <p>"Muy profesional y amable, definitivamente recomendaría sus servicios."</p>
+                </div>
+                <div class="Clientes">
+                    <h4>Comentario 3</h4>
+                    <p>"Transformaron mi patio trasero en un paraíso verde, ¡estoy encantado!"</p>
+
+                </div>
+            </div>
+            
+        </Section>
+
+
+              
+    </main>
 
 </body>
 

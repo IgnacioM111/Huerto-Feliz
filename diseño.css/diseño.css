@@ -1,1 +1,95 @@
+h1{
+    text-align: center;
+}
 
+
+
+.informacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}   
+
+.datosEmpresa{
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(148, 238, 178);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.formulario {
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(148, 238, 178);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+
+
+
+
+/* Estilos para la sección de servicios */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(10, 242, 6, 0.2);
+    padding: 15px; 
+    margin: 10px;
+    text-align: center;
+}
+
+.card:hover {  
+    transition: transform 0.5s;
+    transform: scale(1.1) translateY(-25px);
+}
+
+/* Estilos para la sección de historia */
+.historia {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(185, 195, 189);
+   
+}
+
+.visualJardin {
+    width: 25%;
+    padding: 10px;
+    background-color: rgb(148, 238, 178);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.textHistoria {
+    width: 65%;
+    padding: 10px;
+    background-color: rgb(148, 238, 178);
+    border-radius: 20px ;
+    margin: 10px;
+}
+
+.comentarios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+
+.Clientes {
+    width:28%;
+    height: 200px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(10, 242, 6, 0.2);
+    padding: 15px; 
+    margin: 10px;
+    text-align: center;
+}
