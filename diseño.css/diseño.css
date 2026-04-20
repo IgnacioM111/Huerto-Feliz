@@ -1,8 +1,12 @@
-h1{
+h1,h2{
     text-align: center;
 }
 
-
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(185, 195, 189);;
+}
 
 .informacion {
     display: flex;
@@ -12,11 +16,13 @@ h1{
 
 .datosEmpresa{
     width: 30%;
-    padding: 10px;
+    padding: 10px;s
     background-color: rgb(148, 238, 178);
     border-radius: 20px;
     margin: 10px;
 }
+
+/* Estilos para la sección de formulario */
 
 .formulario {
     width: 30%;
@@ -25,21 +31,51 @@ h1{
     border-radius: 20px;
     margin: 10px;
 }
-
+.campo {
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+input, textarea {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.error {
+    color: red;
+    font-size: 12px;
+}
+button {
+    padding: 10px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
 
 
 
 /* Estilos para la sección de servicios */
+.carrusel-container{
+    position: relative;
+    width: 1000px;
+    margin: auto;
+}
+
+.carrusel{
+    overflow: hidden;
+}
+
 .services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
+    display: flex; 
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+    transition: transform 0.5s ease;
 }
 
 .card {
-    width: 300px;
+    min-width: 300px; 
     height: 400px;
     border-radius: 20px;
     box-shadow: 0px 4px 8px rgba(10, 242, 6, 0.2);
@@ -51,6 +87,26 @@ h1{
 .card:hover {  
     transition: transform 0.5s;
     transform: scale(1.1) translateY(-25px);
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: -50px;
+}
+
+.next {
+    right: -50px;
 }
 
 /* Estilos para la sección de historia */
@@ -92,4 +148,34 @@ h1{
     padding: 15px; 
     margin: 10px;
     text-align: center;
+}
+
+/* Estilos para la sección de contacto */
+
+.publicidad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.instagram{
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(148, 238, 178);
+    border-radius: 20px;
+    margin: 10px;
+}
+.Facebook{
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(148, 238, 178);
+    border-radius: 20px;
+    margin: 10px;
+}
+.Twitter{
+    width: 30%;
+    padding: 10px;
+    background-color: rgb(148, 238, 178);
+    border-radius: 20px;
+    margin: 10px;
 }

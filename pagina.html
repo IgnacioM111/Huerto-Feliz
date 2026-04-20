@@ -12,7 +12,8 @@
         <h1>Bienvenido a Huerto Feliz</h1>
     </header>
     <main>
-
+        
+        <!-- Sección de información y formulario de contacto -->
         <section>
             <section class="informacion">
                 <div class="datosEmpresa">
@@ -23,54 +24,170 @@
                     <p>Email: info@huertofeliz.com</p>
 
                 </div>
+
                 <div class="formulario">
                     <h2>Formulario de Contacto</h2>
-                    <form action="/enviar" method="post">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required><br><br>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required><br><br>
-                        <label for="mensaje">Mensaje:</label><br>
-                        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
-                        <input type="submit" value="Enviar">
+
+                    <form id="formContacto">
+
+                        <div class="campo">
+                            <label>Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                            <small class="error"></small>
+                        </div>
+
+                        <div class="campo">
+                            <label>Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <small class="error"></small>
+                        </div>
+
+                        <div class="campo">
+                            <label>Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                            <small class="error"></small>
+                        </div>
+
+                        <div class="campo">
+                            <label>Consulta:</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                            <small class="error"></small>
+                        </div>
+
+                        <button type="submit">Enviar</button>
+
                     </form>
-
-
                 </div>
+
+                <script>
+                document.getElementById("formContacto").addEventListener("submit", function(e) {
+
+                    e.preventDefault(); // evita envío automático
+
+                    let valido = true;
+
+                    // limpiar errores
+                    document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+                    // inputs
+                    const nombre = document.getElementById("nombre");
+                    const email = document.getElementById("email");
+                    const telefono = document.getElementById("telefono");
+                    const mensaje = document.getElementById("mensaje");
+
+                    // VALIDACIONES
+
+                    if (nombre.value.trim() === "") {
+                        mostrarError(nombre, "El nombre es obligatorio");
+                        valido = false;
+                    }
+
+                    if (email.value.trim() === "") {
+                        mostrarError(email, "El email es obligatorio");
+                        valido = false;
+                    }
+
+                    if (telefono.value.trim() === "") {
+                        mostrarError(telefono, "El teléfono es obligatorio");
+                        valido = false;
+                    }
+
+                    if (mensaje.value.trim() === "") {
+                        mostrarError(mensaje, "Debe escribir una consulta");
+                        valido = false;
+                    }
+
+                    // si todo está bien
+                    if (valido) {
+                        alert("Formulario enviado correctamente ✅");
+                        this.reset();
+                    }
+                });
+
+                function mostrarError(input, mensaje) {
+                    const error = input.parentElement.querySelector(".error");
+                    error.textContent = mensaje;
+                }
+                </script>
             </section>
         </section>
 
-        
         <!-- Sección de servicios -->
-        <section>
+         <section>
             <h2>Servicios</h2>
-            <section class="services">
-                    <div class="card">
-                        <h3>Corte de pasto</h3>
-                        <img src="/imagenes/huerto.jpg" alt="Huerto">
-                        <p>Reseña: Servicio de corte de pasto profesional y eficiente.</p>
-                        <p>Precio: $50</p>
+
+            <div class="carrusel-container">
+
+                <button class="btn prev" onclick="anterior()">⟨</button>
+
+                <div class="carrusel">
+                    <div class="services" id="services">
+
+                        <div class="card">
+                            <h3>Corte de pasto</h3>
+                            <img src="/imagenes/huerto.jpg" alt="Huerto">
+                            <p>Reseña: Servicio de corte de pasto profesional y eficiente.</p>
+                            <p>Precio: $50</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Poda de árboles</h3>
+                            <img src="/imagenes/huerto.jpg" alt="Huerto">
+                            <p>Reseña: Servicio de poda de árboles profesional y eficiente.</p>
+                            <p>Precio: $30</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Riego de plantas</h3>
+                            <img src="/imagenes/huerto.jpg" alt="Huerto">
+                            <p>Reseña: Servicio de riego de plantas profesional y eficiente.</p>
+                            <p>Precio: $100</p>
+                        </div>
+
+                        <div class="card">
+                            <h3>Fertilización</h3>
+                            <img src="/imagenes/huerto.jpg" alt="Huerto">
+                            <p>Reseña: Servicio de fertilización profesional y eficiente.</p>
+                            <p>Precio: $80</p>
+                        </div>
+
                     </div>
-                    <div class="card">
-                        <h3>Poda de árboles</h3>
-                        <img src="/imagenes/huerto.jpg" alt="Huerto">
-                        <p>Reseña: Servicio de poda de árboles profesional y eficiente.</p>
-                        <p>Precio: $30</p>
-                    </div>
-                    <div class="card">
-                        <h3>Riego de plantas</h3>
-                        <img src="/imagenes/huerto.jpg" alt="Huerto">
-                        <p>Reseña: Servicio de riego de plantas profesional y eficiente.</p>
-                        <p>Precio: $100</p>
-                    </div>  
-                    <div class="card">
-                        <h3>Fertilización</h3>
-                        <img src="/imagenes/huerto.jpg" alt="Huerto">
-                        <p>Reseña: Servicio de fertilización profesional y eficiente.</p>
-                        <p>Precio: $80</p>
-                    </div>
-            </section>
+                </div>
+
+                <button class="btn next" onclick="siguiente()">⟩</button>
+
+            </div>
         </section>
+
+        <script>
+        let index = 0;
+        const anchoCard = 320; // 300 + margen
+
+        function mostrar() {
+            const carrusel = document.getElementById("services");
+            carrusel.style.transform = `translateX(-${index * anchoCard}px)`;
+        }
+
+        function siguiente() {
+            const total = document.querySelectorAll(".card").length;
+
+            index++;
+            if (index >= total) index = 0;
+
+            mostrar();
+        }
+
+        function anterior() {
+            const total = document.querySelectorAll(".card").length;
+
+            index--;
+            if (index < 0) index = total - 1;
+
+            mostrar();
+        }
+        </script>
+
+      
 
        <!-- Sección de historia y comentarios -->
         <Section>
@@ -118,6 +235,28 @@
 
               
     </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <section>
+            <h5>Buscanos en:</h5>
+            <div class="publicidad">
+                <div class="instagram">
+                    <h4>Instagram</h4>
+                    <p>@huertofeliz</p>
+                </div>
+                <div class="Facebook">
+                    <h4>Facebook</h4>
+                    <p>huertofeliz</p>
+                </div>
+                <div class="Twitter">
+                    <h4>Twitter</h4>
+                    <p>@huertofeliz</p>
+                </div>
+            </div>
+        </section>
+
+    </footer>
 
 </body>
 
